@@ -1,2 +1,38 @@
-<p>my-component works!</p>
-<input [(ngModel)]="id">
+<input [(ngModel)]="id" />
+<input readonly [(ngModel)]="id" />
+<p>Mon id est {{ id }}</p>
+<br />
+<p>
+  Mon pokemon selectionné est
+  {{ pokemons[0] && pokemons[+selectedPokemonID].name }}
+</p>
+<!--
+    <select [(ngModel)]="selectedPokemonID">
+      <option [value]="pokemon.id" *ngFor="let pokemon of pokemons">{{
+        pokemon.name
+      }}</option>
+    </select>
+    
+    <ul>
+      <li *ngFor="let pokemon of pokemons">{{ pokemon.name }}</li>
+    </ul>
+-->
+
+<br />
+
+<input [(ngModel)]="searchPokemonName" />
+<br />
+<select [(ngModel)]="selectedPokemonID">
+  <option
+    [value]="pokemon.id"
+    *ngFor="
+      let pokemon of pokemons | filterPokemonPipe: 'name':searchPokemonName
+    "
+    >{{ pokemon.name }}</option
+  >
+</select>
+
+<button (click)="go()">GO</button>
+<div *ngIf="pokemonDetail">
+  <app-pokemondetail [detail]="pokemonDetail"></app-pokemondetail>
+</div>
