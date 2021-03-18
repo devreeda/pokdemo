@@ -1,7 +1,5 @@
 # TP2 ANGULAR - Pokdemo
 
-- [name=Rida GHOUTI TERKI]
-
 Le projet Pokdemo est une introduction au Framework Angular qui vise affiche de différentes manière une liste de Pokemons à l'aide d'appels API vers https://pokeapi.co/.
 
 ## Lancer le projet
