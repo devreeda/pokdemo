@@ -46,7 +46,3 @@ La classe Pokemon va stocker toutes les informations relatives à un Pokemon (so
 ## Conclusion
 
 On retrouve au final une application fonctionnelle qui affiche les pokemons choisie. Petit bonus : j'ai affiché une image du Pokemon sélectionné. Elle est évidemment améliorable ne serait-ce que par son design en modifiant les styles css pour chaque composant.
-
-- parler des fonctionnalités
-- parler des composants
-- parler des liens entre eux
